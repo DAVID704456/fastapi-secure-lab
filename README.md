@@ -25,7 +25,13 @@
 ### 3. Сервис в Minikube
 - Локальный кластер запущен, поды в статусе `Running`.
 - Доступ через `kubectl port-forward` на порт `8888`.
-
+- 
+4. Yandex Cloud (Terraform)
+bash
+cd terraform
+terraform init
+terraform apply -auto-approve
+После выполнения terraform apply будет выведен публичный IP-адрес виртуальной машины. Сервис будет доступен по адресу: http://<IP>:80
 ---
 
 ## Скриншоты выполнения
