@@ -1,0 +1,3 @@
+yc_token     = "ваш_iam_токен"
+cloud_id     = "ваш_cloud_id"
+folder_id    = "ваш_folder_id"
