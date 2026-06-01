@@ -54,7 +54,7 @@ terraform apply -auto-approve
 - Установленные: Git, Docker, Minikube, kubectl, Python 3.10+.
 
 ### 1. Клонирование репозитория
-```bash
+
 git clone https://github.com/DAVID704456/fastapi-secure-lab.git
 cd fastapi-secure-lab/secure-app
 2. Локальный запуск (без Docker)
@@ -64,13 +64,13 @@ uvicorn app.main:app --reload
 Открыть в браузере: http://localhost:8000
 
 3. Сборка Docker-образа и запуск контейнера
-bash
+
 docker build -t fastapi-secure .
 docker run -d -p 8000:8000 fastapi-secure
 Проверить: curl http://localhost:8000
 
 4. Развёртывание в Minikube
-bash
+
 minikube start --driver=docker
 minikube image load fastapi-secure
 kubectl apply -f k8s/
@@ -84,7 +84,7 @@ kubectl port-forward -n secure-ns service/fastapi-svc 8888:80
 
 Собран образ и запущен контейнер:
 
-bash
+
 docker build -t fastapi-secure .
 docker run -d -p 80:8000 fastapi-secure
 Публичный IP: 81.26.178.108. Сервис доступен по адресу http://81.26.178.108.
